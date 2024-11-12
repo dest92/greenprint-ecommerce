@@ -1,14 +1,18 @@
+// src/app/products/[id]/page.tsx
 import { products } from "../../lib/products";
 import AddToCartButton from "@/app/components/AddToCartButton";
 import Image from "next/image";
 import { Check } from "lucide-react";
 import { notFound } from "next/navigation";
 
-export default function ProductDetailPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+interface PageProps {
+  params: {
+    id: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export default async function ProductDetailPage({ params }: PageProps) {
   const product = products.find((p) => p.id === params.id);
 
   if (!product) {
@@ -94,4 +98,11 @@ export default function ProductDetailPage({
       </div>
     </div>
   );
+}
+
+// Generamos las rutas estáticas en build time
+export async function generateStaticParams() {
+  return products.map((product) => ({
+    id: product.id,
+  }));
 }
