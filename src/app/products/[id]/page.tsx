@@ -1,18 +1,26 @@
-// src/app/products/[id]/page.tsx
 import { products } from "../../lib/products";
 import AddToCartButton from "@/app/components/AddToCartButton";
 import Image from "next/image";
 import { Check } from "lucide-react";
 import { notFound } from "next/navigation";
+import { Metadata } from 'next';
 
-interface PageProps {
+type Props = {
   params: {
     id: string;
   };
-  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const product = products.find((p) => p.id === params.id);
+  
+  return {
+    title: product ? `${product.name} - GreenPrint` : 'Producto no encontrado',
+    description: product?.description || 'Producto no encontrado',
+  };
 }
 
-export default async function ProductDetailPage({ params }: PageProps) {
+export default function ProductDetailPage({ params }: Props) {
   const product = products.find((p) => p.id === params.id);
 
   if (!product) {
@@ -100,7 +108,6 @@ export default async function ProductDetailPage({ params }: PageProps) {
   );
 }
 
-// Generamos las rutas estáticas en build time
 export async function generateStaticParams() {
   return products.map((product) => ({
     id: product.id,
