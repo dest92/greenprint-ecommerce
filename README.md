@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌱 GreenPrint E-commerce
 
-## Getting Started
+## Descripción
+GreenPrint E-commerce es una plataforma de comercio electrónico desarrollada para la venta de sistemas hidropónicos sostenibles impresos en 3D. Este proyecto forma parte de la iniciativa GreenPrint - Agricultural Innovations, que busca revolucionar la agricultura urbana mediante soluciones tecnológicas y ecológicas.
 
-First, run the development server:
+## ✨ Características
 
+- 🛍️ Catálogo de productos hidropónicos
+- 🛒 Carrito de compras funcional
+- 📱 Diseño responsive
+- 🖼️ Visualización detallada de productos
+- 💳 Simulación de proceso de pago
+- 🌿 Interfaz moderna y eco-friendly
+
+## 🚀 Tecnologías Utilizadas
+
+- [Next.js 14](https://nextjs.org/) - Framework de React
+- [TypeScript](https://www.typescriptlang.org/) - Superset de JavaScript tipado
+- [Tailwind CSS](https://tailwindcss.com/) - Framework de CSS utilitario
+- [Zustand](https://github.com/pmndrs/zustand) - Gestión de estado
+- [Lucide React](https://lucide.dev/) - Iconos
+
+## 🛠️ Instalación
+
+1. Clona el repositorio:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/tuusuario/greenprint-ecommerce.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instala las dependencias:
+```bash
+cd greenprint-ecommerce
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Inicia el servidor de desarrollo:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-## Learn More
+## 📂 Estructura del Proyecto
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+  ├── app/              # Páginas y rutas de la aplicación
+  ├── components/       # Componentes reutilizables
+  ├── lib/             # Utilidades y datos
+  ├── store/           # Estado global (Zustand)
+  └── types/           # Definiciones de tipos TypeScript
+public/
+  └── images/          # Imágenes y assets
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📱 Páginas Principales
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Inicio (/)**: Presentación de la marca y productos destacados
+- **Productos (/products)**: Catálogo completo de sistemas hidropónicos
+- **Detalle de Producto (/products/[id])**: Información detallada de cada producto
+- **Carrito (/cart)**: Gestión de productos seleccionados
+- **Checkout (/checkout)**: Proceso de pago simulado
 
-## Deploy on Vercel
+## 🤝 Contribuir
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Las contribuciones son bienvenidas. Para cambios importantes:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork el proyecto
+2. Crea una nueva rama (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
+
+## 👥 Equipo
+
+GreenPrint - Agricultural Innovations es un proyecto desarrollado por:
+- Aaron Zhang
+- Lucas Gottig
+- Brisa Henríquez
+- Bruno Barraud
+- Jazmín Sicalo
+- Matías Acebal
+
+## 📞 Contacto
+
+- Website: [greenprint.dev.ar](https://greenprint.dev.ar)
